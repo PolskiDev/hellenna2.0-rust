@@ -1,0 +1,17 @@
+BUILDSCHEME.TXT
+
+Source files are located inside: (src/)
+Distributable releases are located inside: (target/release/)
+*Debug releases are located inside: (target/debug/)
+
+
+
+[RUN]:
+Run Project:                    cargo run
+
+[BUILD]:
+Build a debugging release:      cargo build
+Build a   dist    release:      cargo build --release
+
+
+Gabriel Margarido
