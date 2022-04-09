@@ -68,7 +68,9 @@ function let(name,value)
 
     if name:find(":") ~= nil then
         --@exists explicit declaration
-        if n:sub(1,1) == "$" then
+        if n:sub(1,1) == "$"
+        or n:sub(1,1) == "@"
+        then
             if value:sub(1,1) == "&" then
                 --file:write("let mut "..n:sub(2)..":"..t.." = \""..value:sub(2).."\";\n")
                 file:write("let mut "..n:sub(2).." = \""..value:sub(2).."\""..";\n")
@@ -104,8 +106,13 @@ function let(name,value)
     end
 end
 
+
+
 function var(name,value)
-    if value:sub(1,1) == "&" then
+    if value:sub(1,1) == "&"
+    or value:sub(1,1) == "$"
+    or value:sub(1,1) == "@"
+    then
         -- String:      &Arnold
         file:write(name:sub(2).." = \""..value:sub(2).."\"",';\n')
     
