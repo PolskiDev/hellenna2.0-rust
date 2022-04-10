@@ -74,7 +74,7 @@ elseif arg[2] == "--run" then
 elseif arg[2] == "--build" then
     go_build()
 else
-    print("\nTranslate to Rust source code  (.rs):          lua helc <source> --transpile <out>")
+    print("\nTranslate to Rust source code  (.rs):            lua helc <source> --transpile <out>")
     print("Build and run namespace:                         lua helc <source> --run <out>")
     print("Or build a binary file  (.exe):                  lua helc <source> --build <out>\n")
     
